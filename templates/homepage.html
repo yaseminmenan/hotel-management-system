@@ -1,0 +1,12 @@
+ {% extends 'base.html' %}
+ {% block content %}
+    <h3>Project developed in {{ name }}</h3>
+    <p>this is my first template</p>
+    {% if rooms %}
+        <ul>
+            {% for room in rooms %}
+                <li>Room {{room.number}} - {{room.type}} - {{room.beds}} beds - {{room.capacity}} persons </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
