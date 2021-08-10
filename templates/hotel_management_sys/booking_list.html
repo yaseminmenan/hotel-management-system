@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking List</title>
+</head>
+<body>
+     {% if booking_list %}
+        <ul>
+            {% for booking in booking_list %}
+                <li> {{booking}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
