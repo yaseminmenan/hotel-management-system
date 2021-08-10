@@ -1,4 +1,6 @@
  {% extends 'base.html' %}
+ {% load static %}
+
  {% block content %}
     <h3>Project developed in {{ name }}</h3>
     <p>this is my first template</p>
@@ -9,4 +11,5 @@
             {% endfor %}
         </ul>
     {% endif %}
+<!--    <img src="{% static 'seal.jfif' %}" />-->
 {% endblock %}
