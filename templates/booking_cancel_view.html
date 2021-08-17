@@ -33,7 +33,7 @@
 
             <!-- Div 2: Room Information -->
             <div class="room-info">
-                <h1>{{room_type}}</h1>
+                <h1>{{room_category}}</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id optio rem saepe culpa architecto tempora
                     numquam debitis reiciendis! Quaerat laudantium consequuntur doloribus quod placeat consectetur
                     veniam,
@@ -44,22 +44,13 @@
             <form id="booking-form" action="" method="POST">
 
                 {% csrf_token %}
-
+                <h2>Are you sure you want to cancel this booking?</h2>
+                <h2> Details:</h2>
+                <h3> Room {{booking.room.number}}, {{booking.get_room_type}} </h3>
+                <h3> {{booking}}</h3>
                 <!-- Input Div -->
                 <div class="input-div">
-                    <label for="id_check_in">Check In : </label>
-                    <input type="datetime-local" id="id_check_in" name="check_in">
-                </div>
-
-                <!-- Input Div -->
-                <div class="input-div">
-                    <label for="id_check_out">Check Out : </label>
-                    <input type="datetime-local" id="id_check_out" name="check_out">
-                </div>
-
-                <!-- Input Div -->
-                <div class="input-div">
-                    <button type="submit">Book the Room</button>
+                    <button type="submit">Cancel the Booking</button>
                 </div>
 
             </form>

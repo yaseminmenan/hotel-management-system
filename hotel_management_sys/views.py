@@ -1,8 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from django.views.generic import ListView, FormView, View
+from django.views.generic import ListView, FormView, View, DeleteView
 from .models import Room, Booking
 from .forms import AvailabilityForm
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from hotel_management_sys.functions.booking_availability import is_available
 
 
@@ -31,8 +31,9 @@ def RoomListView(request):
     })
 
 
-class BookingList(ListView):
+class BookingListView(ListView):
     model = Booking
+    template_name = "booking_list_view.html"
 
     def get_queryset(self, *args, **kwargs):
         if self.request.user.is_staff:
@@ -82,27 +83,7 @@ class RoomDetailView(View):
             return HttpResponse('Error! Invalid form.')
 
 
-class BookingView(FormView):
-    form_class = AvailabilityForm
-    template_name = 'booking_form.html'
-
-    def make_booking(self, room, data):
-        booking = Booking.objects.create(
-            user=self.request.user,
-            room=room,
-            check_in=data['check_in'],
-            check_out=data['check_out']
-        )
-        booking.save()
-        return booking
-
-    def form_valid(self, form):
-        data = form.cleaned_data
-        room_list = Room.objects.filter(type=data['room_type'])
-
-        for room in room_list:
-            if is_available(room, data['check_in'], data['check_out']):
-                booking = self.make_booking(room, data)
-                return HttpResponse(booking)
-
-        return HttpResponse('We are sorry, but all rooms of this type are fully booked.')
+class CancelBookingView(DeleteView):
+    model = Booking
+    template_name = 'booking_cancel_view.html'
+    success_url = reverse_lazy('hotel_management_sys:BookingListView')
