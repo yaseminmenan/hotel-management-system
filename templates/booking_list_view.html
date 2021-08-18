@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+    {% block head %}
+    <title> Bookings </title>
+    {% endblock %}
+
     {% block stylesheets %}
     <link rel="stylesheet" href="{% static 'hotel_management_sys/css/bookings.css' %}">
     {% endblock %}

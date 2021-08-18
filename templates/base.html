@@ -1,9 +1,8 @@
 {% load static %}
 <html>
         <head>
-            <title> The Ninth Resort </title>
-            <meta name="description" content="this is the description">
-
+            {% block head %}
+            {% endblock %}
             <link rel="stylesheet" href="{% static 'hotel_management_sys/css/nav.css' %}">
             <link rel="stylesheet" href="{% static 'hotel_management_sys/css/footer.css' %}">
             {% block stylesheets %}
