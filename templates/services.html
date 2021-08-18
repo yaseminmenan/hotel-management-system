@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block stylesheets% %}
+    <link rel="stylesheet" href="{% static 'hotel_management_sys/css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'hotel_management_sys/css/footer.css' %}">
+    {% endblock %}
+
+    {% block content %}
+    <section class="about-section container">
+        <h2 class="section-header"> Hotel Facilities</h2>
+        <div class="content">
+            <div>
+                <ul>
+                    <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                    <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                    <li> <a href="{% url 'hotel_management_sys:Services' %}">SERVICES </a></li>
+                    <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                    <li> BOOKINGS </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li> Single bedrooms</li>
+                    <li> Double bedrooms</li>
+                    <li> Triple bedrooms</li>
+                    <li> Twin bedrooms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section container">
+        <h2 class="section-header"> Guest Service</h2>
+        <div class="content">
+            <div>
+                <ul>
+                    <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                    <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                    <li> <a href="{% url 'hotel_management_sys:Services' %}">SERVICES </a></li>
+                    <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                    <li> BOOKINGS </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li> Single bedrooms</li>
+                    <li> Double bedrooms</li>
+                    <li> Triple bedrooms</li>
+                    <li> Twin bedrooms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section container">
+        <h2 class="section-header"> Activities</h2>
+        <div class="content">
+            <div class="room">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/3b/4f/16/punta-cana-princess-all.jpg">
+            </div>
+            <div class="room">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/3b/4f/16/punta-cana-princess-all.jpg">
+            </div>
+            <div class="room">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/3b/4f/16/punta-cana-princess-all.jpg">
+            </div>
+        </div>
+
+       <div class="content">
+            <div class="room">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/3b/4f/16/punta-cana-princess-all.jpg">
+            </div>
+            <div class="room">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/3b/4f/16/punta-cana-princess-all.jpg">
+            </div>
+            <div class="room">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/3b/4f/16/punta-cana-princess-all.jpg">
+            </div>
+        </div>
+    </section>
+    {% endblock %}

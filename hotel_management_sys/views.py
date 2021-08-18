@@ -21,6 +21,11 @@ def about(request):
     })
 
 
+def services(request):
+    return render(request, 'services.html', {
+    })
+
+
 def RoomListView(request):
     room = Room.objects.all()[0]
     room_types = dict(room.ROOM_TYPES)
@@ -43,6 +48,10 @@ class BookingListView(ListView):
     def get_queryset(self, *args, **kwargs):
         if self.request.user.is_staff:
             booking_list = Booking.objects.all()
+            return booking_list
+
+        booking_list = []
+        if self.request.user.is_anonymous:
             return booking_list
 
         booking_list = Booking.objects.filter(user=self.request.user)

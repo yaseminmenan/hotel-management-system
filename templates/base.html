@@ -1,0 +1,62 @@
+<html>
+        <head>
+            <title> The Ninth Resort </title>
+            <meta name="description" content="this is the description">
+            {% block stylesheets% %}
+            {% endblock %}
+        </head>
+        <body>
+            <header class="main-header">
+                <nav class="nav main-nav">
+                    <ul>
+                        <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                        <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                        <li> <a href="{% url 'hotel_management_sys:Services' %}">SERVICES </a></li>
+                        <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                        <li ><a href="{% url 'hotel_management_sys:BookingListView' %}">BOOKINGS</a> </li>
+                        <li> LOG IN </li>
+                    </ul>
+                </nav>
+                <h1 class="hotel-title">The Ninth Resort</h1>
+            </header>
+            <hr>
+            {% block content %}
+            {% endblock %}
+
+            <hr>
+            <footer class="main-footer">
+                <div class="content">
+                    <div>
+                        <h3 class="footer-header">Navigation</h3>
+                        <ul>
+                            <li class="footer-li"> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                            <li class="footer-li"> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                            <li class="footer-li"> <a href="{% url 'hotel_management_sys:Services' %}">SERVICES </a></li>
+                            <li class="footer-li"> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                            <li class="footer-li"> <a href="{% url 'hotel_management_sys:BookingListView' %}">BOOKINGS</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-header">Facilities</h3>
+                        <ul>
+                            <li class="footer-li"> Single bedrooms</li>
+                            <li class="footer-li"> Double bedrooms</li>
+                            <li class="footer-li"> Triple bedrooms</li>
+                            <li class="footer-li"> Twin bedrooms</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-header"> CONTACT US</h3>
+                        <ul>
+                            <li class="footer-li"> Abcd Street </li>
+                            <li class="footer-li"> 260-14 City, Country </li>
+                            <li class="footer-li"> +62 000-0000-00 </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </footer>
+        </body>
+    </html>

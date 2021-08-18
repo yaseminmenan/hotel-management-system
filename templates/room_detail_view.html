@@ -1,21 +1,18 @@
+{% extends "base.html" %}
 {% load static %}
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room Detail</title>
+    {% block stylesheets% %}
     <script src="https://kit.fontawesome.com/692189991f.js" crossorigin="anonymous"></script>
 
     <!-- Main StyleSheet -->
     <link rel="stylesheet" href="{% static 'hotel_management_sys/css/detail.css' %}">
+    <link rel="stylesheet" href="{% static 'hotel_management_sys/css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'hotel_management_sys/css/footer.css' %}">
+    {% endblock %}
 
-</head>
 
-<body>
-
-    <!-- Main Content -->
-    <div class="content">
+    {% block content %}
+   <div class="content">
 
         <!-- Room Image -->
         <div class="image">
@@ -67,7 +64,4 @@
         </div> <!-- END Room Div -->
 
     </div> <!-- END Main Content Div -->
-
-</body>
-
-</html>
+    {% endblock %}

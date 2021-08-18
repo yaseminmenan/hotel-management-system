@@ -1,37 +1,21 @@
+{% extends "base.html" %}
 {% load static %}
 
-    <html>
-        <head>
-        </head>
-        <body>
-            <header>
-                 <nav>
-                    <ul>
-                        <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
-                        <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
-                        <li> SERVICES </li>
-                        <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
-                        <li> CONTACT </li>
-                    </ul>
-                </nav>
-                <hr>
-                <h1> Hotel Whatever</h1>
-            </header>
-            <section>
-                <h2>ABOUT</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere nulla in dui sodales fermentum. Nam ut turpis faucibus, ullamcorper justo ut, accumsan neque. Morbi volutpat urna vitae est pharetra scelerisque. Fusce auctor ligula eget est dictum, vel commodo nisi auctor. Aliquam egestas purus diam, interdum tempus nunc pharetra vel. Maecenas interdum tincidunt nisi, quis commodo purus vulputate vitae. Donec aliquam viverra nibh, at semper mauris condimentum ac. Nulla vel sagittis sem, et interdum dui. Donec accumsan ipsum eget quam suscipit luctus.</p>
-                <img src="https://pix10.agoda.net/hotelImages/339132/-1/041597567a8197d6cbdf98a8bccec750.jpg?s=1024x768">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere nulla in dui sodales fermentum. Nam ut turpis faucibus, ullamcorper justo ut, accumsan neque. Morbi volutpat urna vitae est pharetra scelerisque. Fusce auctor ligula eget est dictum, vel commodo nisi auctor. Aliquam egestas purus diam, interdum tempus nunc pharetra vel. Maecenas interdum tincidunt nisi, quis commodo purus vulputate vitae. Donec aliquam viverra nibh, at semper mauris condimentum ac. Nulla vel sagittis sem, et interdum dui. Donec accumsan ipsum eget quam suscipit luctus.</p>
-            </section>
-            <footer>
-                <h3>Navigation</h3>
-                 <ul>
-                        <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
-                        <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
-                        <li> SERVICES </li>
-                        <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
-                        <li> CONTACT </li>
-                    </ul>
-            </footer>
-        </body>
-    </html>
+    {% block stylesheets% %}
+    <link rel="stylesheet" href="{% static 'hotel_management_sys/css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'hotel_management_sys/css/footer.css' %}">
+    {% endblock %}
+
+
+    {% block content %}
+    <section class="about-section container">
+        <h2 class="section-header"> About</h2>
+        <div class="about-image">
+            <img src="https://cdn.architecturendesign.net/wp-content/uploads/2014/06/13844.jpg">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis, augue quis bibendum tempus, enim ligula vestibulum nibh, ac auctor felis nisl eget sem. Nulla mollis mi ut ipsum venenatis, et interdum odio convallis. Pellentesque dapibus non lorem sit amet egestas. Aliquam ac convallis erat. Sed sit amet libero maximus, elementum augue sit amet, facilisis dolor. Nullam justo ligula, porta maximus elementum et, porttitor sit amet mauris. Nam sed commodo nunc. Aliquam pellentesque neque a tortor suscipit sagittis et vitae nunc. Praesent sed arcu in quam porta porta. Nullam laoreet turpis id augue finibus, id fermentum ex consectetur. Vestibulum et pretium ante. Donec scelerisque ex vitae congue tempor. Ut a enim non eros suscipit placerat. Maecenas a finibus neque. Maecenas at nisi sed augue varius consectetur vel hendrerit ante.</p>
+        <p>  </p>
+        <p>Nunc eu tortor sed nunc vulputate commodo vitae non justo. Nam a eleifend elit, eu congue ex. Donec est lectus, dictum id eros a, bibendum consequat ex. Donec commodo nibh ante, nec consectetur mi cursus vel. Duis sem dui, pellentesque in eros vitae, finibus molestie ex. Integer lacinia placerat diam, sed lobortis eros posuere sit amet. Sed porttitor ligula ut dolor finibus tempor. Maecenas vehicula nec quam vel pellentesque.</p>
+    </section>
+    {% endblock %}
+

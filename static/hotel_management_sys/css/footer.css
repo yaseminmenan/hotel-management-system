@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-evenly;
+}
+.main-footer {
+    background-color: wheat;
+    color: white;
+    padding: .25em 0;
+}
+
+.footer-header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    font-size: 2.5em;
+}
+
+.footer-li {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .5em 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-li a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+}

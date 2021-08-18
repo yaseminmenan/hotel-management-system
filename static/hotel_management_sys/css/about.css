@@ -5,6 +5,8 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    color: #777;
 
 }
 body{
@@ -49,7 +51,7 @@ body{
     background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/11/17/111788_v3.jpeg");
     background-size: cover;
     background-blend-mode: multiply;
-    padding-bottom: 900px;
+    padding-bottom: 100px;
 }
 
 /*Brand CSS */
@@ -61,19 +63,21 @@ body{
     color: #333;
 }
 
+
+
 /* Inside Room Divs */
 h2{
     margin: 0.25rem;
 }
 a{
     text-decoration: none;
-    color: #777;
+    color: #dbdbdb;
 }
 img{
     max-width:90%;
 }
 
-.welcome-section {
+.about-section {
     margin: 1em;
 }
 
@@ -90,84 +94,22 @@ img{
     font-size: 2.5em;
 }
 
-.main-footer {
-    background-color: wheat;
-    color: white;
-    padding: .25em 0;
+.about-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.footer-header {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: normal;
-    color: #333;
-    text-align: left;
-    font-size: 2.5em;
+.gallery-pic {
+    margin: 10px;
+    flex: 1 0 21%;
+    height: 100px;
+    padding:2rem;
 }
 
-.footer-li {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: .5em 0;
-    color: #333;
-    text-decoration: none;
-}
-
-.footer-li a {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-}
-
-.btn {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: rgba(255,255,255,.1);
-    color: #777;
-    border-radius: 0;
-    font-size: 2em;
-    font-weight: lighter;
-    padding-left: 2em;
-    padding-right: 2em;
-    display:flex;
-    justify-content: center;
-}
-.btn a{
-    text-decoration: none;
-    text-align: center;
-    color: #333;
-}
-
-.btn:hover{
-    background-color: gray;
-}
-
-
-/* Main Div */
-.content {
+.gallery-pics {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width:100%;
-    justify-content: space-evenly;
-}
 
-/* Room Divs */
-.room{
-    max-width:40%;
-    min-width: 400px;
-    text-align: center;
-    border-radius: 0.5rem;
-    padding:1rem;
-    margin:0.5rem;
-    background-color: #444;
-    flex: 1;
-}
-
-.room:hover{
-    background-color: #353535;
-}
-
-.paragr {
-    color: #333;
 }
