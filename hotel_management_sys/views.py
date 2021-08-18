@@ -26,6 +26,12 @@ def services(request):
     })
 
 
+def login(request):
+    return render(request, 'login.html',{
+
+    })
+
+
 def RoomListView(request):
     room = Room.objects.all()[0]
     room_types = dict(room.ROOM_TYPES)

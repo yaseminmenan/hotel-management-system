@@ -1,4 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 
+/* Root CSS */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: white;
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.25;
+}
 
 /* Inside Room Divs */
 h2{
@@ -6,7 +20,7 @@ h2{
 }
 a{
     text-decoration: none;
-    color: #777;
+    color: #ecc16f;
 }
 img{
     max-width:90%;
@@ -19,6 +33,8 @@ img{
 .container {
     margin: 1em;
     padding: 0 1.5em;
+    text-align: center;
+    font-size: 1.25em;
 }
 
 .section-header{
@@ -29,31 +45,15 @@ img{
     font-size: 2.5em;
 }
 
-/* Main Div */
 .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width:100%;
-    justify-content: space-evenly;
+    justify-content: left;
 }
 
-/* Room Divs */
-.room{
-    max-width:40%;
-    min-width: 400px;
-    text-align: center;
-    border-radius: 0.5rem;
-    padding:1rem;
-    margin:0.5rem;
-    background-color: #444;
-    flex: 1;
-}
-
-.room:hover{
-    background-color: #353535;
-}
-
-.paragr {
-    color: #333;
+.image{
+    flex: 0.3;
+    width: 90%;
 }

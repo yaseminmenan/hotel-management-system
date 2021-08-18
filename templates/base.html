@@ -1,8 +1,13 @@
+{% load static %}
 <html>
         <head>
             <title> The Ninth Resort </title>
             <meta name="description" content="this is the description">
-            {% block stylesheets% %}
+
+            <link rel="stylesheet" href="{% static 'hotel_management_sys/css/nav.css' %}">
+            <link rel="stylesheet" href="{% static 'hotel_management_sys/css/footer.css' %}">
+            {% block stylesheets %}
+
             {% endblock %}
         </head>
         <body>
@@ -14,7 +19,8 @@
                         <li> <a href="{% url 'hotel_management_sys:Services' %}">SERVICES </a></li>
                         <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
                         <li ><a href="{% url 'hotel_management_sys:BookingListView' %}">BOOKINGS</a> </li>
-                        <li> LOG IN </li>
+                        <li> <a href="{% url 'hotel_management_sys:LoginView' %}">LOGIN </a> </li>
+                        <li> <a href="{% url 'hotel_management_sys:LogoutView' %}">LOGOUT </a> </li>
                     </ul>
                 </nav>
                 <h1 class="hotel-title">The Ninth Resort</h1>
