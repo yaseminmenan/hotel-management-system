@@ -1,0 +1,37 @@
+{% load static %}
+
+    <html>
+        <head>
+        </head>
+        <body>
+            <header>
+                 <nav>
+                    <ul>
+                        <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                        <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                        <li> SERVICES </li>
+                        <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                        <li> CONTACT </li>
+                    </ul>
+                </nav>
+                <hr>
+                <h1> Hotel Whatever</h1>
+            </header>
+            <section>
+                <h2>ABOUT</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere nulla in dui sodales fermentum. Nam ut turpis faucibus, ullamcorper justo ut, accumsan neque. Morbi volutpat urna vitae est pharetra scelerisque. Fusce auctor ligula eget est dictum, vel commodo nisi auctor. Aliquam egestas purus diam, interdum tempus nunc pharetra vel. Maecenas interdum tincidunt nisi, quis commodo purus vulputate vitae. Donec aliquam viverra nibh, at semper mauris condimentum ac. Nulla vel sagittis sem, et interdum dui. Donec accumsan ipsum eget quam suscipit luctus.</p>
+                <img src="https://pix10.agoda.net/hotelImages/339132/-1/041597567a8197d6cbdf98a8bccec750.jpg?s=1024x768">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere nulla in dui sodales fermentum. Nam ut turpis faucibus, ullamcorper justo ut, accumsan neque. Morbi volutpat urna vitae est pharetra scelerisque. Fusce auctor ligula eget est dictum, vel commodo nisi auctor. Aliquam egestas purus diam, interdum tempus nunc pharetra vel. Maecenas interdum tincidunt nisi, quis commodo purus vulputate vitae. Donec aliquam viverra nibh, at semper mauris condimentum ac. Nulla vel sagittis sem, et interdum dui. Donec accumsan ipsum eget quam suscipit luctus.</p>
+            </section>
+            <footer>
+                <h3>Navigation</h3>
+                 <ul>
+                        <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                        <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                        <li> SERVICES </li>
+                        <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                        <li> CONTACT </li>
+                    </ul>
+            </footer>
+        </body>
+    </html>

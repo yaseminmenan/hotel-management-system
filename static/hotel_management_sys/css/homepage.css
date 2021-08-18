@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+/* Root CSS */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    color: #777;
+
+}
+body{
+    background-color: white;
+    color: rgb(236, 235, 228);
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+.nav ul {
+    margin: 0
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: rgba(255,255,255, .3);
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-top: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.main-header {
+    background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/11/17/111788_v3.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-bottom: 900px;
+}
+
+/*Brand CSS */
+.hotel-title{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    margin: 1.5rem;
+}
+
+
+
+/* Inside Room Divs */
+h2{
+    margin: 0.25rem;
+}
+a{
+    text-decoration: none;
+    color: #dbdbdb;
+}
+img{
+    max-width:90%;
+}
+
+.welcome-section {
+    margin: 1em;
+}
+
+.container {
+    margin: 1em;
+    padding: 0 1.5em;
+}
+
+.section-header{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.main-footer {
+    background-color: wheat;
+    color: white;
+    padding: .25em 0;
+}
+
+.footer-li {
+    padding: .5em 0;
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.1);
+    color: #333;
+    border-radius: 0;
+    font-size: 2em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn:hover{
+    background-color: gray;
+}
+
+.gallery-pic {
+    margin: 10px;
+    flex: 1 0 21%;
+    height: 100px;
+    padding:2rem;
+}
+
+.gallery-pics {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* Main Div */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+/* Room Divs */
+.room{
+    max-width:20%;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 1rem;
+    padding:1rem;
+    margin:0.5rem;
+    background-color: #444;
+    flex: 1;
+}
+
+.room:hover{
+    background-color: #353535;
+}
+

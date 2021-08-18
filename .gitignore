@@ -102,7 +102,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+hotel_management_system/.env
 .venv
 env/
 venv/

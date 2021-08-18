@@ -1,15 +1,78 @@
- {% extends 'base.html' %}
- {% load static %}
+{% load static %}
 
- {% block content %}
-    <h3>Project developed in {{ name }}</h3>
-    <p>this is my first template</p>
-    {% if rooms %}
-        <ul>
-            {% for room in rooms %}
-                <li>Room {{room.number}} - {{room.type}} - {{room.beds}} beds - {{room.capacity}} persons </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-<!--    <img src="{% static 'seal.jfif' %}" />-->
-{% endblock %}
+    <html>
+        <head>
+            <title> Hotel Whatever </title>
+            <meta name="description" content="this is the description">
+            <link rel="stylesheet" href="{% static 'hotel_management_sys/css/homepage.css' %}">
+        </head>
+        <body>
+
+            <header class="main-header">
+                <nav class="nav main-nav">
+                    <ul>
+                        <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                        <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                        <li> SERVICES </li>
+                        <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                        <li> CONTACT </li>
+                        <li> LOG IN </li>
+                    </ul>
+                </nav>
+                <h1 class="hotel-title">The Ninth Resort</h1>
+            </header>
+
+            <section class="welcome-section container">
+                <h2 class="section-header"> Welcome</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere nulla in dui sodales fermentum. Nam ut turpis faucibus, ullamcorper justo ut, accumsan neque. Morbi volutpat urna vitae est pharetra scelerisque. Fusce auctor ligula eget est dictum, vel commodo nisi auctor. Aliquam egestas purus diam, interdum tempus nunc pharetra vel. Maecenas interdum tincidunt nisi, quis commodo purus vulputate vitae. Donec aliquam viverra nibh, at semper mauris condimentum ac. Nulla vel sagittis sem, et interdum dui. Donec accumsan ipsum eget quam suscipit luctus.</p>
+            </section>
+
+            <section class="book-section container">
+                <h2 class="section-header"> Book now</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere nulla in dui sodales fermentum. Nam ut turpis faucibus, ullamcorper justo ut, accumsan neque. Morbi volutpat urna vitae est pharetra scelerisque. Fusce auctor ligula eget est dictum, vel commodo nisi auctor. Aliquam egestas purus diam, interdum tempus nunc pharetra vel. Maecenas interdum tincidunt nisi, quis commodo purus vulputate vitae. Donec aliquam viverra nibh, at semper mauris condimentum ac. Nulla vel sagittis sem, et interdum dui. Donec accumsan ipsum eget quam suscipit luctus.</p>
+                <div>
+                    <button class="btn"><a href="{% url 'hotel_management_sys:RoomListView' %}">See rooms</a></button>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-header"> Gallery </h2>
+                <div class="content">
+                    <div class="room">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/115965054.jpg?k=453c69bb8933c3adf4d1274aeb3db9527a2f99344648e82105fb4dab8c9ea8a9&o=">
+                    </div>
+                     <div class="room">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/115965054.jpg?k=453c69bb8933c3adf4d1274aeb3db9527a2f99344648e82105fb4dab8c9ea8a9&o=">
+                    </div>
+                    <div class="room">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/115965054.jpg?k=453c69bb8933c3adf4d1274aeb3db9527a2f99344648e82105fb4dab8c9ea8a9&o=">
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="room">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/115965054.jpg?k=453c69bb8933c3adf4d1274aeb3db9527a2f99344648e82105fb4dab8c9ea8a9&o=">
+                    </div>
+                     <div class="room">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/115965054.jpg?k=453c69bb8933c3adf4d1274aeb3db9527a2f99344648e82105fb4dab8c9ea8a9&o=">
+                    </div>
+                    <div class="room">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/115965054.jpg?k=453c69bb8933c3adf4d1274aeb3db9527a2f99344648e82105fb4dab8c9ea8a9&o=">
+                    </div>
+                </div>
+
+
+            </section>
+            <hr>
+            <footer class="main-footer">
+                <h3>Navigation</h3>
+                 <ul>
+                        <li class="footer-li"> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                        <li class="footer-li"> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                        <li class="footer-li"> SERVICES </li>
+                        <li class="footer-li"> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                        <li class="footer-li"> CONTACT </li>
+                    </ul>
+            </footer>
+        </body>
+    </html>

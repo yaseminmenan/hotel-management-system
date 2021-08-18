@@ -11,8 +11,19 @@
 
 <body>
     <!-- Brand -->
-    <h1 id="brand">Hotelina</h1>
-
+    <h1 id="brand">Hotel Whatever</h1>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="{% url 'hotel_management_sys:Home' %}">HOME </a> </li>
+                <li> <a href="{% url 'hotel_management_sys:RoomListView' %}">ROOMS</a> </li>
+                <li> SERVICES </li>
+                <li> <a href="{% url 'hotel_management_sys:About' %}">ABOUT</a> </li>
+                <li> CONTACT </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
     <!-- Main Content -->
     <div class="content">
         {% for room_category, room_url in room_list %}

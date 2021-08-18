@@ -16,6 +16,11 @@ def homepage(request):
     })
 
 
+def about(request):
+    return render(request, 'about.html', {
+    })
+
+
 def RoomListView(request):
     room = Room.objects.all()[0]
     room_types = dict(room.ROOM_TYPES)
