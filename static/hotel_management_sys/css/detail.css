@@ -1,5 +1,4 @@
 /* Root CSS */
-
 *{
     padding:0;
     margin:0;
@@ -34,6 +33,8 @@ body{
     align-items: start;
     flex-direction: column;
 }
+
+
 
 /* Sub Divs */
 

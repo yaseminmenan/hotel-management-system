@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
-
 /* Root CSS */
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
-    font-family: Raleway, sans-serif;
-    color: #777;
 
 }
 body{
@@ -22,7 +18,7 @@ h2{
 }
 a{
     text-decoration: none;
-    color: #dbdbdb;
+    color: #777;
 }
 img{
     max-width:90%;

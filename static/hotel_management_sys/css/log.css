@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
-
 /* Root CSS */
 *{
     padding:0;
@@ -56,4 +54,8 @@ img{
 .image{
     flex: 0.3;
     width: 90%;
+}
+
+.sign-up {
+    text-align: left;
 }

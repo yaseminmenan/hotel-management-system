@@ -40,7 +40,8 @@ def RoomListView(request):
     for room_type in room_types:
         room = room_types.get(room_type)
         room_url = reverse('hotel_management_sys:RoomDetailView', kwargs={'type': room_type})
-        room_list.append((room, room_url))
+        room_path = '/Images/' + room + '.jpg'
+        room_list.append((room, room_url, room_path))
 
     return render(request, 'room_list_view.html', {
         'room_list': room_list
@@ -52,6 +53,7 @@ class BookingListView(ListView):
     template_name = "booking_list_view.html"
 
     def get_queryset(self, *args, **kwargs):
+
         if self.request.user.is_staff:
             booking_list = Booking.objects.all()
             return booking_list
@@ -67,14 +69,16 @@ class BookingListView(ListView):
 class RoomDetailView(View):
     def get(self, request, *args, **kwargs):
         room_type = self.kwargs.get('type', None)
+        room_path = '/Images/' + room_type + '.jpg'
+        print(room_path)
         room_list = Room.objects.filter(type=room_type)
         form = AvailabilityForm()
-
         if len(room_list) > 0:
             room = room_list[0]
             room_type = dict(room.ROOM_TYPES).get(room.type, None)
             return render(request, 'room_detail_view.html', {
-                'room_type': room_type
+                'room_type': room_type,
+                'room_path': room_path,
         })
         else:
             return HttpResponse('That room type does not exist')

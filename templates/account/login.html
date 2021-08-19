@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load account socialaccount %}
@@ -16,7 +15,7 @@
 <div class="content container">
 
   <div class="image">
-    <img src="https://thumbs.dreamstime.com/b/beach-tall-coconut-trees-against-blue-sky-off-west-coast-myanmar-beautiful-47612686.jpg">
+    <img src="{% static '/Images/login-img.jpg' %}">
   </div>
 
   {% get_providers as socialaccount_providers %}
